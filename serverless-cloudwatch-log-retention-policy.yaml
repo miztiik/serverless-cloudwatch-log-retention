@@ -1,0 +1,35 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+
+Description: >
+  Scheduled Lambda function that go through all AWS regions and make sure no
+  CloudWatch Logs log group is left without a retention policy.
+
+####################################################################################
+Resources:
+####################################################################################
+  CWLogRetentionFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Description: 'For any Cloudwatch Log Group that does not already have a retention policy, add a policy to help save on storage costs.'
+      Handler: cw-log-retention.lambda_handler
+      Runtime: python3.7
+      CodeUri: ./src/cw-log-retention.py
+      MemorySize: 128
+      Timeout: 60
+      Events:
+        Timer:
+          Type: Schedule
+          Properties:
+            Schedule: rate(24 hours)
+      Policies:
+        - AWSLambdaExecute # Managed Policy
+        - Version: '2012-10-17' # Policy Document
+          Statement:
+          - Effect: Allow
+            Action:
+            - 'logs:DescribeLogGroups'
+            - 'logs:DescribeLogStreams'
+            - 'logs:putRetentionPolicy'
+            - 'ec2:DescribeRegions'
+            Resource: '*'
