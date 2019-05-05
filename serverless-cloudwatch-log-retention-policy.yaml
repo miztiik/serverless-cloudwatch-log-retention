@@ -5,17 +5,23 @@ Description: >
   Scheduled Lambda function that go through all AWS regions and make sure no
   CloudWatch Logs log group is left without a retention policy.
 
+Parameters: 
+  RETENTION_IN_DAYS: 
+    Type: Number
+    Default: 1
+    Description: Number of days to retain the logs.
 Resources:
   CloudWatchLogRetentionFunction:
     Type: 'AWS::Serverless::Function'
     Properties:
-      Description: 'For any Cloudwatch Log Group that does not already have a retention policy, add a policy to help save on storage costs.'
+      Description: 'For any CloudWatch Log Group that does not already have a retention policy, add a policy to help save on storage costs.'
       Handler: cw-log-retention.lambda_handler
       Runtime: python3.7
       CodeUri: ./src/cw-log-retention.py
       Environment:
         Variables:
-          RETENTION_IN_DAYS: 5
+          RETENTION_IN_DAYS:
+            Ref: RETENTION_IN_DAYS
       MemorySize: 128
       Timeout: 60
       Events:
