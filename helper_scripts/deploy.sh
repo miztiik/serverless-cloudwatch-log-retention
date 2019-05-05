@@ -8,6 +8,7 @@ TEMPLATE_NAME="serverless-cloudwatch-log-retention-policy.yaml"
 STACK_NAME="set-cloudwatch-logs-retention"
 OUTPUT_DIR="./outputs/"
 PACKAGED_OUTPUT_TEMPLATE="${OUTPUT_DIR}${STACK_NAME}-packaged-template.yaml"
+SERVICE_NAME="cw-log-retention-enforcer"
 #----- End of user parameters  -----#
 
 aws cloudformation package \
@@ -19,4 +20,5 @@ aws cloudformation deploy \
     --profile "${AWS_PROFILE}" \
     --template-file "${PACKAGED_OUTPUT_TEMPLATE}" \
     --stack-name "${STACK_NAME}" \
+    --tags Key=Service,Value="${SERVICE_NAME}"" \
     --capabilities CAPABILITY_IAM
