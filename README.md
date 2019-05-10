@@ -24,7 +24,7 @@ This lambda function adds a retention policy to CloudWatch log group[s] that doe
   
     ```sh
     AWS_PROFILE="default"
-    BUCKET_NAME="sam-templates-010" # bucket must exist in the SAME region the deployment is taking place
+    BUCKET_NAME="sam-templates-011" # bucket must exist in the SAME region the deployment is taking place
     TEMPLATE_NAME="serverless-cloudwatch-log-retention-policy.yaml"
     STACK_NAME="set-cloudwatch-logs-retention"
     OUTPUT_DIR="./outputs/"
