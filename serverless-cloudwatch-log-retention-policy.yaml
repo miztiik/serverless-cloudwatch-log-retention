@@ -6,7 +6,7 @@ Description: >
   CloudWatch Logs log group is left without a retention policy.
 
 Parameters: 
-  RETENTION_IN_DAYS: 
+  RETENTIONINDAYS: 
     Type: Number
     Default: 1
     Description: Number of days to retain the logs.
@@ -21,7 +21,7 @@ Resources:
       Environment:
         Variables:
           RETENTION_IN_DAYS:
-            Ref: RETENTION_IN_DAYS
+            Ref: RETENTIONINDAYS
       MemorySize: 128
       Timeout: 60
       Events:
