@@ -32,5 +32,5 @@ aws cloudformation deploy \
     --profile "${AWS_PROFILE}" \
     --template-file "${PACKAGED_OUTPUT_TEMPLATE}" \
     --stack-name "${STACK_NAME}" \
-    --tags Key=Service,Value="${SERVICE_NAME}" \
+    --tags Service="${SERVICE_NAME}" \
     --capabilities CAPABILITY_IAM
