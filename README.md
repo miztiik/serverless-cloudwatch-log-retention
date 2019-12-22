@@ -60,6 +60,11 @@ This lambda function adds a retention policy to CloudWatch log group[s] that doe
     }
     ```
 
-### Contact Us
+## Buy me a coffee
 
-You can reach out to us to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
+Buy me a coffee ☕ here `https://paypal.me/valaxy`, _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
+
+
+### Metadata
+
+**Level**: 200
