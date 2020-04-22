@@ -4,10 +4,9 @@ This lambda function adds a retention policy to CloudWatch log group[s] that doe
 
 ![AWS Serverless CloudWatch Logs Retention Policy Enforcer](images/miztiik-serverless-cloudwatch-log-retention-policy.png)
 
-#### Follow this article in [Youtube](https://youtube.com/c/valaxytechnologies)
+## Follow this article in [Youtube](https://youtu.be/k0_TersWbtI)
 
-
-0. # Prerequisites
+1. ## Prerequisites
 
 - AWS CLI pre-configured
 - Log Retention Days: Defaults to 14 days
@@ -60,11 +59,14 @@ This lambda function adds a retention policy to CloudWatch log group[s] that doe
     }
     ```
 
-## Buy me a coffee
+## ?? Buy me a coffee
 
-Buy me a coffee ☕ here `https://paypal.me/valaxy`, _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
+Buy me a coffee ? through [Paypal](https://paypal.me/valaxy), _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
 
+### ?? Help/Suggestions or ?? Bugs
 
-### Metadata
+- [Github Issues](https://github.com/miztiik/my-first-cdk-project/issues)
+
+### ?? Metadata
 
 **Level**: 200
