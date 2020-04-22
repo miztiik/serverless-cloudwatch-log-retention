@@ -59,14 +59,14 @@ This lambda function adds a retention policy to CloudWatch log group[s] that doe
     }
     ```
 
-## ?? Buy me a coffee
+## 👋 Buy me a coffee
 
 Buy me a coffee ? through [Paypal](https://paypal.me/valaxy), _or_ You can reach out to get more details through [here](https://youtube.com/c/valaxytechnologies/about).
 
-### ?? Help/Suggestions or ?? Bugs
+### 💡 Help/Suggestions or 🐛 Bugs
 
-- [Github Issues](https://github.com/miztiik/my-first-cdk-project/issues)
+- [Github Issues](https://github.com/miztiik/serverless-cloudwatch-log-retention/issues)
 
-### ?? Metadata
+### 🏷️ Metadata
 
 **Level**: 200
